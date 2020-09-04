@@ -1,7 +1,9 @@
 export class Editorial {
+  id: number;
+  name: string;
 
-  constructor(private idA: number, private nameA: string) {
+  constructor(id: number, name: string) {
+    this.id = id;
+    this.name = name;
   }
-  get id(): number { return this.idA; }
-  get name(): string { return this.nameA; }
 }

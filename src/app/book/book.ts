@@ -1,18 +1,29 @@
-
-import { Editorial } from '../editorial/editorial';
+import { Editorial } from "../editorial/editorial";
 
 export class Book {
+  id: number;
+  name: string;
+  isbn: string;
+  description: string;
+  image: string;
+  publishingdate: any;
+  editorial: Editorial;
 
-  constructor(private idA: number, private nameA: string, private isbnA: string,
-              private descriptionA: string, private imageA: string, private publishingdateA: any,
-              private editorialA: Editorial) { }
-
-  get id(): number { return this.idA; }
-  get name(): string { return this.nameA; }
-  get isbn(): string { return this.isbnA; }
-  get description(): string { return this.descriptionA; }
-  get image(): string { return this.imageA; }
-  get publishingdate(): any { return this.publishingdateA; }
-  get editorial(): Editorial { return this.editorialA; }
-
+  constructor(
+    id: number,
+    name: string,
+    isbn: string,
+    description: string,
+    image: string,
+    publishingdate: any,
+    editorial: Editorial
+  ) {
+    this.id = id;
+    this.name = name;
+    this.isbn = isbn;
+    this.description = description;
+    this.image = image;
+    this.publishingdate = publishingdate;
+    this.editorial = editorial;
+  }
 }
