@@ -47,9 +47,7 @@ describe("BookListarComponent", () => {
     expect(component).toBeTruthy();
   });
 
-  it("Should have an figcaption elemeent ", () => {
-    console.log("Caption------------->" + debug.query(By.css("figcaption")));
-
+  it("Should have an figcaption element ", () => {
     expect(debug.query(By.css("figcaption")).nativeElement.innerText).toContain(
       component.books[0].name
     );
