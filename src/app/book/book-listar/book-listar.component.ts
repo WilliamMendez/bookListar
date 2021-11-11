@@ -10,7 +10,9 @@ import { BookService } from '../book.service';
 export class BookListarComponent implements OnInit {
   constructor(private bookService: BookService) { }
 
-  books: Array<Book>;
+  selectedBook: Book;
+  selected = false;
+  books: Array<BookDetail>;
 
   getBooks(): void {
     this.bookService.getBooks()
@@ -20,6 +22,11 @@ export class BookListarComponent implements OnInit {
   }
   ngOnInit() {
     this.getBooks();
+  }
+
+  onSelected(b: Book): void {
+    this.selected = true;
+    this.selectedBook = b;
   }
 
 }
